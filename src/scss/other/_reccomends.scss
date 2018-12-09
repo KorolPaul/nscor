@@ -1,0 +1,12 @@
+.reccomends {
+    text-align: center;
+
+    &_items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &_item {
+        flex-grow: 1;
+    }
+}

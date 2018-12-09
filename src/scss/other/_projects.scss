@@ -1,0 +1,36 @@
+.project {
+    @include tablet {
+        display: flex;
+    }
+
+    &_image {
+        width: 100px;
+        @include tablet {
+            flex-shrink: 0;
+            width: 50%;
+        }
+    }
+    &_info {
+        position: relative;
+        padding: 26px 16px;
+        @include tablet {
+            padding: 80px 80px 60px 60px;
+        }
+    }
+    &_title {
+        font: bold 23px/30px $font-family;
+        margin: 0 0 30px;
+    }
+    &_calculate {
+        background: url(#{$img-path}/icons/chevron-right.png) no-repeat center right;
+        position: absolute;
+        left: 33px;
+        right: 0;
+        bottom: 0;
+        font-size: 16px;
+        font-weight: bold;
+        color: $color;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+}

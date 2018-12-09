@@ -1,0 +1,55 @@
+.quote {
+    background: $color;
+    color: $light_color;
+    padding: 60px 0;
+    @include tablet {
+        padding: 100px 0;
+    }
+
+    &_holder {
+        @include layout;
+        @include tablet {
+            max-width: 680px;
+        }
+    }
+    &_author {
+        display: flex;
+    }
+    &_author-image {
+        border-radius: 50%;
+        height: 80px;
+        width: 80px;
+        margin: 0 20px 0 0;
+    }
+    &_author-name {
+        font-weight: bold;
+        line-height: 1;
+        margin: 20px 0 6px;
+    }
+    &_author-job {
+        line-height: 1;
+        margin: 0;
+    }
+    &_link {
+        display: inline-block;
+        margin: 36px 0 0;
+        font-size: 16px;
+        color: $light_color;
+        text-decoration: none;
+        position: relative;
+
+        &::before {
+            content: '';
+            background: url(#{$img-path}/icons/arrow-outside.png);
+            position: absolute;
+            left: 104%;
+            top: 9px;
+            height: 8px;
+            width: 8px;
+        }
+    }
+    &_link-size {
+        color: $gray_color;
+        display: block;
+    }
+}

@@ -1,0 +1,59 @@
+.header {
+    position: relative;
+    padding: 0 0 40px;
+
+    &_holder {
+        @include layout;
+        position: relative;
+    }
+    &_bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    &_top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 26px 0;
+        @include tablet {
+            padding: 24px 0;
+        }
+    }
+    &_top-button {
+        display: none;
+        @include tablet {
+            background: none;
+            display: block;
+            font: bold 13px $font-family;
+            padding: 11px 20px;
+            border: 2px solid currentColor;
+            color: $light_color;
+            margin: 0 0 0 30px;
+        }
+    }
+    &_top-right {
+        display: flex;
+        align-items: center;
+    }
+    &_points {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 28px;
+        @include tablet {
+            margin-bottom: 46px;
+        }
+
+        li {
+            color: $light_color;
+            margin: 0 0 10px;
+            padding: 0;
+        }
+    }
+    &_title {
+        color: $light_color;
+    }
+}

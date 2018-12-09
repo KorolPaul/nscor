@@ -1,0 +1,89 @@
+.options-holder {
+    padding: 0 $layout_indent;
+    margin: 0 0 70px;
+    @include tablet {
+        overflow: hidden;
+        display: flex;
+        padding: 0;
+    }
+}
+
+.options {
+    box-sizing: border-box;
+    padding: 56px 0 62px;
+    position: relative;
+    @include tablet {
+        width: 50%;
+        padding: 68px 48px 98px;
+    }
+
+    &__dark {
+        &::before {
+            content: '';
+            background: $color;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: -$layout_indent;
+            right: -$layout_indent;
+            @include tablet {
+                right: -1000px;
+            }
+        }
+    }
+
+    &_type {
+        color: $gray_color;
+        font-size: $font-size__small;
+        display: block;
+        margin: 0 0 $layout_indent;
+        text-transform: uppercase;
+        position: relative;
+    }
+    &_title {
+        font-weight: bold;
+        font-size: 32px;
+        margin: 0 0 32px;
+        position: relative;
+
+        .options__dark & {
+            color: $light_color;
+        }
+    }
+    &_list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        position: relative;
+
+        &::before {
+            content: '';
+            background: url(#{$img-path}/dots.png) repeat-y;
+            width: 5px;
+            position: absolute;
+            top: 20px;
+            bottom: 20px;
+            left: 18px;
+        }
+    }
+    &_item {
+        display: flex;
+        align-items: center;
+        margin: 0 0 40px;
+
+        .options__dark & {
+            color: $light_color;
+        }
+    }
+    &_item-icon {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background: $bright_color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 22px 0 0;
+        flex-shrink: 0;
+    }
+}

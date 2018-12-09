@@ -1,0 +1,62 @@
+.request {
+    background: url(#{$img-path}/sky-bg.jpg) no-repeat;
+    background-size: cover;
+    padding: 0 0 72px;
+    position: relative;
+    @include tablet {
+        padding: 0 0 118px;
+    }
+
+    &::before {
+        content: '';
+        background: rgba(255, 255, 255, .5);
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
+
+    &_holder {
+        @include layout;
+        position: relative;
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &_left,
+    &_right {
+        @include tablet {
+            width: 45%;
+        }
+    }
+    &_right {
+        @include tablet {
+            padding: 100px 0 0;
+        }
+    }
+    &_subtitle {
+        font-size: 24px;
+        line-height: 31px;
+        margin: 0 0 32px;
+    }
+    &_list {
+        list-style: none;
+        padding: 0;
+    }
+    &_list-item {
+        padding: 0 0 30px 36px;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 2px;
+            background: url(#{$img-path}/icons/check.png) no-repeat;
+            height: 18px;
+            width: 24px;
+        }
+    }
+}

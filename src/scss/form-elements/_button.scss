@@ -1,0 +1,31 @@
+.button {
+    background: $bright_color;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 22px 36px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    transition: .2s ease-in-out background-color,
+                .2s ease-in-out color;
+    @include tablet {
+        width: auto;
+    }
+
+    &:hover {
+        background-color: $color;
+        color: $light_color;
+    }
+    &__dark {
+        background-color: $color;
+        color: $light_color;
+    
+        &:hover {
+            background-color: $bright_color;
+            color: $color;
+        }
+    }
+}

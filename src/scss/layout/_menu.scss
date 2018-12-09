@@ -1,0 +1,45 @@
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    visibility: hidden;
+    padding: 50px $layout_indent $layout_indent;
+    background: $light_color;
+    @include tablet {
+        padding: 0;
+        position: relative;
+        visibility: visible;
+        z-index: 1;
+        background: transparent;
+    }
+
+    &.opened {
+        z-index: 1;
+        visibility: visible;
+        background: $light_color;
+    }
+
+    &_link {
+        color: $color;
+        font-size: $font-size__small;
+        text-decoration: none;
+        text-transform: uppercase;
+        display: block;
+        padding: $layout_indent;
+        border-bottom: 1px solid currentColor;
+        @include tablet {
+            color: $light_color;
+            display: inline-block;
+            margin: 0 14px;
+            border: none;
+            padding: 0;
+        }
+
+        &:hover {
+            color: $bright_color;
+            text-decoration: none;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+body {
+    background: url(#{$img_path}/bg.jpg) 0 center repeat;
+    background-size: 50% auto;
+    color: $color;
+    font: #{$font-size}/24px $font-family;
+}
+
+a {
+    color: $link_color;
+    transition: .2s ease-in-out color;
+
+    &:hover {
+        color: $link_color__hover;
+        outline: none;
+    }
+}
+
+p {
+    line-height: 1.75;
+    margin: 0 0 10px;
+}
+
+ul,
+ol {
+    padding: 0 0 0 20px;
+}
+
+
+blockquote {
+    font-size: 24px;
+    line-height: 33px;
+    margin: 0 0 55px;
+    position: relative;
+    padding: 84px 0 0;
+    @include tablet {
+        font-size: 29px;
+        line-height: 41px;
+        padding: 0;
+    }
+
+    &::before {
+        content: '';
+        background: url(#{$img-path}/icons/quote.png) no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 60px;
+        width: 64px;
+        @include tablet {
+            top: -21px;
+            left: -93px;
+        }
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+button,
+input,
+textarea {
+    &:focus {
+        outline: none;
+    }
+}

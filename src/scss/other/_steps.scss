@@ -1,0 +1,56 @@
+.steps {
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.step {
+    box-sizing: border-box;
+    border: 1px solid #e1e1e1;
+    padding: 66px 28px 46px;
+    position: relative;
+    margin: 0 0 70px;
+    @include tablet {
+        width: 32%;
+    }
+
+    &_name {
+        background: $bright_color;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        height: 60px;
+        width: 60px;
+        transform: translate(-50%, -50%);
+        font: bold 29px/55px $font-family;
+        text-align: center;
+    }
+    &_image {
+        display: block;
+        margin: 0 auto 56px;
+    }
+    &_title {
+        font: bold 21px/27px $font-family;;
+        margin: 0 0 11px;
+    }
+    &_list {
+        list-style: none;
+        padding: 0;
+    }
+    &_list-item {
+        padding: 0 0 30px 36px;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 7px;
+            background: url(#{$img-path}/icons/arrow-right.png) no-repeat;
+            height: 14px;
+            width: 14px;
+        }
+    }
+}

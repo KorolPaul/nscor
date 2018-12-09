@@ -1,0 +1,78 @@
+.footer {
+    @include layout;
+    padding-top: 36px;
+    padding-bottom: 36px;
+    @include tablet {
+        display: flex;
+    }
+
+    &_left {
+        flex-grow: 0;
+        flex-shrink: 1;
+    }
+
+    &_right {
+        flex-grow: 1;
+        flex-shrink: 0;
+        @include tablet {
+            text-align: right;
+        }
+    }
+
+    &_adress,
+    &_mail {
+        color: $gray_color;
+        font-size: $font-size__small;
+        margin: $layout_indent 0;
+    }
+    &_phone {
+        background-color: $color;
+        color: $light_color;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        padding: 22px 36px;
+        text-align: center;
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+        @include tablet {
+            color: $color;
+            background: transparent;
+            padding: 0;
+            text-align: left;
+        }
+    }
+    &_copyright {
+        font-size: $font-size__small;
+        text-align: center;
+        margin: 36px 0 0;
+        @include tablet {
+            text-align: right;
+        }
+    }
+}
+
+.footer-menu {
+    padding: 0 0 24px;
+
+    &_link {
+        color: $color;
+        font-size: $font-size__small;
+        text-decoration: none;
+        text-transform: uppercase;
+        display: block;
+        padding: 13px 0;
+        @include tablet {
+            display: inline-block;
+            margin: 0 14px;
+            border: none;
+            padding: 0;
+        }
+
+        &:hover {
+            color: $bright_color;
+            text-decoration: none;
+        }
+    }
+}
