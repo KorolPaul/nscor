@@ -1,9 +1,15 @@
 .footer {
-    @include layout;
-    padding-top: 36px;
-    padding-bottom: 36px;
-    @include tablet {
-        display: flex;
+    background: #f5f5f5;
+
+    &_holder {
+        @include layout;
+        padding-top: 36px;
+        padding-bottom: 36px;
+        @include tablet {
+            display: flex;
+            padding-top: 56px;
+            padding-bottom: 50px;
+        }
     }
 
     &_left {
@@ -24,6 +30,7 @@
         color: $gray_color;
         font-size: $font-size__small;
         margin: $layout_indent 0;
+        line-height: 1.2;
     }
     &_phone {
         background-color: $color;
@@ -40,15 +47,20 @@
             color: $color;
             background: transparent;
             padding: 0;
+            font-size: $font-size;
             text-align: left;
+            padding-top: 12px;
+            padding-bottom: 12px;
         }
     }
     &_copyright {
         font-size: $font-size__small;
         text-align: center;
+        color: $gray_color;
         margin: 36px 0 0;
         @include tablet {
             text-align: right;
+            margin: 54px 0 0;
         }
     }
 }

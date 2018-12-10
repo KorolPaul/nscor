@@ -12,4 +12,9 @@ $(window).on('load', function () {
         dots: false,
     });
 
+    /* Popup */
+    $('.project_more, .popup_close').click(function() {
+        $('body').toggleClass('popup-opened');
+    });
+    
 });

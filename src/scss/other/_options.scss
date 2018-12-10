@@ -1,10 +1,18 @@
+.options-wrapper {
+    margin: 0 0 70px;
+    @include tablet {
+        overflow: hidden;
+    }
+}
+
 .options-holder {
     padding: 0 $layout_indent;
     margin: 0 0 70px;
     @include tablet {
-        overflow: hidden;
-        display: flex;
         padding: 0;
+        display: flex;
+        max-width: 1260px;
+        margin: 0 auto 228px;
     }
 }
 
@@ -14,9 +22,23 @@
     position: relative;
     @include tablet {
         width: 50%;
-        padding: 68px 48px 98px;
+        padding: 68px 48px 68px;
     }
 
+    &__light {
+        &::before {
+            content: '';
+            background: #f5f5f5;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: -$layout_indent;
+            right: -$layout_indent;
+            @include tablet {
+                left: -10000px;
+            }
+        }
+    }
     &__dark {
         &::before {
             content: '';
@@ -27,7 +49,7 @@
             left: -$layout_indent;
             right: -$layout_indent;
             @include tablet {
-                right: -1000px;
+                right: -10000px;
             }
         }
     }
@@ -36,15 +58,17 @@
         color: $gray_color;
         font-size: $font-size__small;
         display: block;
-        margin: 0 0 $layout_indent;
         text-transform: uppercase;
         position: relative;
     }
     &_title {
         font-weight: bold;
         font-size: 32px;
-        margin: 0 0 32px;
+        margin: 0 0 22px;
         position: relative;
+        @include tablet {
+            font-size: 37px;
+        }
 
         .options__dark & {
             color: $light_color;
@@ -69,7 +93,7 @@
     &_item {
         display: flex;
         align-items: center;
-        margin: 0 0 40px;
+        margin: 0 0 30px;
 
         .options__dark & {
             color: $light_color;

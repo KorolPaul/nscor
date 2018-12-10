@@ -1,12 +1,21 @@
 .reccomends {
     text-align: center;
+    margin: 0 0 82px;
+    @include tablet {
+        margin: 0 0 124px;
+    }
 
     &_items {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
     }
     &_item {
+        width: 48%;
         flex-grow: 1;
+        @include tablet {
+            width: auto;
+        }
     }
 }

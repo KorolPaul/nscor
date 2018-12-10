@@ -5,8 +5,11 @@ textarea {
     border: 1px solid $gray_color;
     font: $font-size $font-family;
     padding: 20px 11px;
+    height: 120px;
+    box-sizing: border-box;
     width: 100%;
     transition: .2s ease-in border-color;
+    margin: 0 0 10px;
 
     &:focus {
         border-color: $color;

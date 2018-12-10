@@ -1,8 +1,4 @@
 .content {
-    padding: 70px 0 0;
-    @include tablet {
-        padding: 120px 0 0;
-    }
 
     &_holder {
         @include layout;

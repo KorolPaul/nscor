@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: url(#{$img_path}/bg.jpg) 0 center repeat;
     background-size: 50% auto;
@@ -29,7 +33,7 @@ ol {
 blockquote {
     font-size: 24px;
     line-height: 33px;
-    margin: 0 0 55px;
+    margin: 0 0 25px;
     position: relative;
     padding: 84px 0 0;
     @include tablet {
@@ -40,7 +44,7 @@ blockquote {
 
     &::before {
         content: '';
-        background: url(#{$img-path}/icons/quote.png) no-repeat;
+        background: url(#{$img-path}/icons/quote.svg) no-repeat;
         position: absolute;
         top: 0;
         left: 0;
@@ -63,4 +67,16 @@ textarea {
     &:focus {
         outline: none;
     }
+}
+
+.subtitle {
+    font-size: 21px;
+    line-height: 1.2;
+    @include tablet {
+        margin: -35px 0 53px;
+    }
+}
+
+.popup-opened {
+    overflow: hidden;
 }

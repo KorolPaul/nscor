@@ -24,7 +24,7 @@
 
 <body>
     <header class="header">
-        <img src="src/img/header-bg.png" alt="" class="header_bg">
+        <img src="src/img/header-bg.jpg" alt="" class="header_bg">
         <div class="header_holder">
             <div class="header_top">
                 <a href="/" class="logo">
@@ -32,11 +32,10 @@
                 </a>
                 <div class="header_top-right">
                     <nav class="menu">
-                        <a href="#" class="menu_link">компании</a>
-                        <a href="#" class="menu_link">Расчет стоимости</a>
-                        <a href="#" class="menu_link">Как мы работаем</a>
-                        <a href="#" class="menu_link">Примеры</a>
-                        <a href="#" class="menu_link">Обращение директора</a>
+                        <a href="#cost" class="menu_link">Расчет стоимости</a>
+                        <a href="#work" class="menu_link">Как мы работаем</a>
+                        <a href="#projects" class="menu_link">Примеры</a>
+                        <a href="#quote" class="menu_link">Обращение директора</a>
                     </nav>
                     <button class="header_top-button">Рассчитать стоимость</button>
                     <button class="menu-toggle"></button>
@@ -54,81 +53,172 @@
     </header>
     <div class="content">
         <div class="content_holder">
+            <!--
             <div class="video">
-                <iframe src="https://www.youtube.com/embed/7mxmFCw-Dig?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/7mxmFCw-Dig?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             </div>
-            <h2>Оцени стоимость доставки он-лайн</h2>
+            -->
+            <h2 id="cost">Считаем стоимость доставки под ключ</h2>
+            <p class="subtitle">Здесь вы можете быстро посчитать примерную стоимость доставки из Китая</p>
+            <div class="calculating">
+                <div class="calculating_data">
+                    <div class="calculating_title">
+                        <h3>Умножайте ставку на вес груза</h3>
+                        <span class="calculating_minimum">Минимум 45 kg</span>
+                    </div>
+                    <div class="calculating_table-wrapper">
+                        <table class="calculating_table">
+                            <thead>
+                                <tr>
+                                    <th>Аэропорт Китая</th>
+                                    <th>100 kg</th>
+                                    <th>300 kg</th>
+                                    <th>500 kg</th>
+                                    <th>1000 kg</th>
+                                    <th>Срок доставки</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>PEK</td>
+                                    <td>1,72 USD</td>
+                                    <td>1,72 USD</td>
+                                    <td>1,72 USD</td>
+                                    <td>1,72 USD</td>
+                                    <td>1-2 дня</td>
+                                </tr>
+                                <tr>
+                                    <td>PVG</td>
+                                    <td>2,09 USD</td>
+                                    <td>2,09 USD</td>
+                                    <td>2,09 USD</td>
+                                    <td>2,09 USD</td>
+                                    <td>1-2 дня</td>
+                                </tr>
+                                <tr>
+                                    <td>CAN</td>
+                                    <td>2,24 USD</td>
+                                    <td>2,24 USD</td>
+                                    <td>2,24 USD</td>
+                                    <td>2,24 USD</td>
+                                    <td>1-2 дня</td>
+                                </tr>
+                                <tr>
+                                    <td>SZX</td>
+                                    <td>2,24 USD</td>
+                                    <td>2,24 USD</td>
+                                    <td>2,24 USD</td>
+                                    <td>2,24 USD</td>
+                                    <td>3-5 дней</td>
+                                </tr>
+                                <tr>
+                                    <td>HKG</td>
+                                    <td>3,80 USD</td>
+                                    <td>3,80 USD</td>
+                                    <td>3,80 USD</td>
+                                    <td>3,80 USD</td>
+                                    <td>1-2 дня</td>
+                                </tr>
+                                <tr>
+                                    <td>TPE</td>
+                                    <td>4,27 USD</td>
+                                    <td>4,27 USD</td>
+                                    <td>4,27 USD</td>
+                                    <td>4,27 USD</td>
+                                    <td>3-5 дней</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="calculating_aside">
+                    <img src="src/img/icons/plus.svg" alt="" class="calculating_plus">
+                    <h3>Стоимость <span>услуг</span></h3>
+                    <div class="calculating_condition">
+                        <p class="calculating_condition-value">1,5%</p>
+                        <p class="calculating_condition-description">от стоимости товара</p>
+                    </div>
+                    <div class="calculating_condition">
+                        <p class="calculating_condition-description">но не менее</p>
+                        <p class="calculating_condition-value">35 000 ₽ </p>
+                    </div>
+                </div>
+            </div>
 
-            <h2>Как мы работаем</h2>
+            <h2 id="work">Как мы работаем</h2>
         </div>
 
+        <div class="options-wrapper">
             <div class="options-holder">
-            <div class="options">
-                <span class="options_type">Вариант 1</span>
-                <p class="options_title">Classic</p>
-                <ul class="options_list">
-                    <li class="options_item">
-                        <div class="options_item-icon">
-                            <img src="src/img/icons/credit-card.png" alt="">
-                        </div>
-                        Вы оплачиваете за товар самостоятельно
-                    </li>
-                    <li class="options_item">
-                        <div class="options_item-icon">
-                            <img src="src/img/icons/plane.svg" alt="">
-                        </div>
-                        Мы доставляем товар в необходимый Вам аэропорт
-                    </li>
-                    <li class="options_item">
-                        <div class="options_item-icon">
-                            <img src="src/img/icons/package.png" alt="">
-                        </div>
-                        При необходимости проводим таможенное оформление груза
-                    </li>
-                </ul>
-            </div>
-            <div class="options options__dark">
-                <span class="options_type">Вариант 2</span>
-                <p class="options_title">ALL-Inclusive</p>
-                <ul class="options_list">
-                    <li class="options_item">
-                        <div class="options_item-icon">
-                            <img src="src/img/icons/document.png" alt="">
-                        </div>
-                        Вы договариваетесь с поставщиком о количестве, качестве и стоимости товара
-                    </li>
-                    <li class="options_item">
-                        <div class="options_item-icon">
-                            <img src="src/img/icons/credit-card.png" alt="">
-                        </div>
-                        Мы оплачиваем данный товар через свою компанию
-                    </li>
-                    <li class="options_item">
-                        <div class="options_item-icon">
-                            <img src="src/img/icons/plane.svg" alt="">
-                        </div>
-                        Доставляем товар в РФ
-                    </li>
-                    <li class="options_item">
-                        <div class="options_item-icon">
-                            <img src="src/img/icons/package.png" alt="">
-                        </div>
-                        Проводим таможенное оформление
-                    </li>
-                    <li class="options_item">
-                        <div class="options_item-icon">
-                            <img src="src/img/icons/report.png" alt="">
-                        </div>
-                        Предоставляем отчет об отгрузке с подтверждающими документами по всем затратам
-                    </li>
-                </ul>
+                <div class="options options__light">
+                    <span class="options_type">Вариант 1</span>
+                    <p class="options_title">Classic</p>
+                    <ul class="options_list">
+                        <li class="options_item">
+                            <div class="options_item-icon">
+                                <img src="src/img/icons/credit-card.svg" alt="">
+                            </div>
+                            Вы оплачиваете за товар самостоятельно
+                        </li>
+                        <li class="options_item">
+                            <div class="options_item-icon">
+                                <img src="src/img/icons/plane.svg" alt="">
+                            </div>
+                            Мы доставляем товар в необходимый Вам аэропорт
+                        </li>
+                        <li class="options_item">
+                            <div class="options_item-icon">
+                                <img src="src/img/icons/package.svg" alt="">
+                            </div>
+                            При необходимости проводим таможенное оформление груза
+                        </li>
+                    </ul>
+                </div>
+                <div class="options options__dark">
+                    <span class="options_type">Вариант 2</span>
+                    <p class="options_title">ALL-Inclusive</p>
+                    <ul class="options_list">
+                        <li class="options_item">
+                            <div class="options_item-icon">
+                                <img src="src/img/icons/document.svg" alt="">
+                            </div>
+                            Вы договариваетесь с поставщиком о количестве, качестве и стоимости товара
+                        </li>
+                        <li class="options_item">
+                            <div class="options_item-icon">
+                                <img src="src/img/icons/credit-card.svg" alt="">
+                            </div>
+                            Мы оплачиваем данный товар через свою компанию
+                        </li>
+                        <li class="options_item">
+                            <div class="options_item-icon">
+                                <img src="src/img/icons/plane.svg" alt="">
+                            </div>
+                            Доставляем товар в РФ
+                        </li>
+                        <li class="options_item">
+                            <div class="options_item-icon">
+                                <img src="src/img/icons/package.svg" alt="">
+                            </div>
+                            Проводим таможенное оформление
+                        </li>
+                        <li class="options_item">
+                            <div class="options_item-icon">
+                                <img src="src/img/icons/report.svg" alt="">
+                            </div>
+                            Предоставляем отчет об отгрузке с подтверждающими документами по всем затратам
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="content_holder">
             <div class="steps">
+                <div class="steps_shape steps_shape__top"></div>
                 <div class="step">
                     <span class="step_name">01</span>
-                    <img src="src/img/step-1.png" alt="" class="step_image">
+                    <img src="src/img/step-1.svg" alt="" class="step_image">
                     <p class="step_title">Проработаем отгрузку товара</p>
                     <p>Правильно выстроим процесс по закупке иностранного товара</p>
                     <ul class="step_list">
@@ -139,7 +229,7 @@
                 </div>
                 <div class="step">
                     <span class="step_name">02</span>
-                    <img src="src/img/step-2.png" alt="" class="step_image">
+                    <img src="src/img/step-2.svg" alt="" class="step_image">
                     <p class="step_title">Доставим и растаможим товар</p>
                     <p>Доставим и растаможим товар</p>
                     <ul class="step_list">
@@ -150,7 +240,7 @@
                 </div>
                 <div class="step">
                     <span class="step_name">03</span>
-                    <img src="src/img/step-3.png" alt="" class="step_image">
+                    <img src="src/img/step-3.svg" alt="" class="step_image">
                     <p class="step_title">Подготовим все документы</p>
                     <p>Экономим Ваше время на ведение ВЭД</p>
                     <ul class="step_list">
@@ -159,19 +249,26 @@
                         <li class="step_list-item">Предоставим полный отчет с детализацией по расходами</li>
                     </ul>
                 </div>
+                <div class="steps_shape steps_shape__bottom"></div>
             </div>
         </div>
         <div class="request">
             <div class="request_holder">
                 <div class="request_left">
-                    <h2>Заявка на расчет</h2>
+                    <h2 id="request">Заявка на расчет</h2>
                     <p class="request_subtitle">Узнайте полную стоимость вашего импорта из Китая</p>
                     <ul class="request_list">
-                        <li class="request_list-item">Каждый запрос индивидуально прорабатывает наш эксперт по ВЭД и дает свои рекомендации.  </li>
-                        <li class="request_list-item">Вы получите полную информацию о расходах на импорт Вашей продукции со всеми расходами (на доставку, таможенное оформление, сертификацию и т. д. )</li>
+                        <li class="request_list-item">Каждый запрос индивидуально прорабатывает наш эксперт по ВЭД
+                            и дает свои рекомендации. </li>
+                        <li class="request_list-item">Вы получите полную информацию о расходах на импорт Вашей
+                            продукции со всеми расходами (на доставку, таможенное оформление, сертификацию и т. д. )</li>
                     </ul>
                 </div>
                 <div class="request_right">
+                    <!--
+                    <script>var amo_forms_params = {"id":418954,"hash":"a387c5750492366863cab81317a28791","locale":"ru"};</script>
+                    <script id="amoforms_script" async="async" charset="utf-8" src="https://forms.amocrm.ru/forms/assets/js/amoforms.js"></script>
+                    -->
                     <form class="form">
                         <div class="form_row">
                             <div class="form_row-item">
@@ -201,47 +298,83 @@
             </div>
         </div>
         <div class="content_holder">
-            <h2>Примеры наших проектов</h2>
+            <h2 id="projects">Примеры наших проектов</h2>
             <div class="projects" id="slider">
                 <div>
                     <div class="project">
-                        <img src="src/img/project-1.png" alt="" class="project_image">
+                        <img src="src/img/project-1.jpg" alt="" class="project_image">
                         <div class="project_info">
-                            <p class="project_title">Доставка в Россию считывателей банковских карт для мобильных устройств из Китая</p>
-                            <p>Идейные соображения высшего порядка, а также реализация намеченных плановых заданий способствует подготовки и реализации дальнейших направлений развития. Идейные соображения высшего порядка, а также рамки и место обучения кадров требуют определения и уточнения новых предложений.</p>
+                            <p class="project_title">Доставка в Россию считывателей банковских карт для мобильных устройств из Китая</p>
+                            <div class="project_text">
+                                <p>Идейные соображения высшего порядка, а также реализация намеченных плановых заданий
+                                способствует подготовки и реализации дальнейших направлений развития. Идейные
+                                соображения высшего порядка, а также рамки и место обучения кадров требуют определения
+                                и уточнения новых предложений.</p>
+                            </div>
+                            <button class="project_more">Подробнее</button>
                             <a href="#" class="project_calculate">Запросить расчет</a>
                         </div>
                     </div>
                 </div>
                 <div>
                     <div class="project">
-                        <img src="src/img/project-1.png" alt="" class="project_image">
+                        <img src="src/img/project-2.jpg" alt="" class="project_image">
                         <div class="project_info">
-                            <p class="project_title">Доставка в Россию считывателей банковских карт для мобильных устройств из Китая</p>
-                            <p>Идейные соображения высшего порядка, а также реализация намеченных плановых заданий способствует подготовки и реализации дальнейших направлений развития. Идейные соображения высшего порядка, а также рамки и место обучения кадров требуют определения и уточнения новых предложений.</p>
+                            <p class="project_title">Доставка в Россию считывателей банковских карт для мобильных
+                                устройств из Китая</p>
+                            <div class="project_text">
+                                <p>Идейные соображения высшего порядка, а также реализация намеченных плановых заданий
+                                способствует подготовки и реализации дальнейших направлений развития. Идейные
+                                соображения высшего порядка, а также рамки и место обучения кадров требуют определения
+                                и уточнения новых предложений.</p>
+                            </div>
+                            <button class="project_more">Подробнее</button>
+                            <a href="#" class="project_calculate">Запросить расчет</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="project">
+                        <img src="src/img/project-3.jpg" alt="" class="project_image">
+                        <div class="project_info">
+                            <p class="project_title">Доставка в Россию считывателей банковских карт для мобильных
+                                устройств из Китая</p>
+                            <div class="project_text">
+                                <p>Идейные соображения высшего порядка, а также реализация намеченных плановых заданий
+                                способствует подготовки и реализации дальнейших направлений развития. Идейные
+                                соображения высшего порядка, а также рамки и место обучения кадров требуют определения
+                                и уточнения новых предложений.</p>
+                            </div>
+                            <button class="project_more">Подробнее</button>
                             <a href="#" class="project_calculate">Запросить расчет</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="reccomends">
-                <h2>Нас рекомендуют</h2>
+                <h2 id="reccomends">Нас рекомендуют</h2>
                 <div class="reccomends_items">
                     <a href="#" class="reccomends_item">
-                        <img src="src/img/spass.png" alt="">
+                        <img src="src/img/spass.png" width="219" alt="">
                     </a>
                     <a href="#" class="reccomends_item">
-                        <img src="src/img/globex.png" alt="">
+                        <img src="src/img/globex.png" width="320" alt="">
                     </a>
                     <a href="#" class="reccomends_item">
-                        <img src="src/img/leader.png" alt="">
+                        <img src="src/img/leader.png" width="161" alt="">
+                    </a>
+                    <a href="#" class="reccomends_item">
+                        <img src="src/img/museum.png" width="185" alt="">
                     </a>
                 </div>
             </div>
         </div>
         <div class="quote">
-            <div class="quote_holder">
-                <blockquote>Я убежден, что российским компаниям давно пора менять отношение к клиенту и подход к работе. А любые изменения надо начинать с себя. Поэтому работу своей компании я строю принципиально по-другому. Наша главная цель – предоставлять клиентам высокое качество сервиса по организации аутсорсинга ВЭД.</blockquote>
+            <div class="quote_holder" id="quote">
+                <blockquote>Я убежден, что российским компаниям давно пора менять отношение к клиенту и подход к
+                    работе. А любые изменения надо начинать с себя. Поэтому работу своей компании я строю принципиально
+                    по-другому. Наша главная цель – предоставлять клиентам высокое качество сервиса по организации
+                    аутсорсинга ВЭД.</blockquote>
                 <div class="quote_author">
                     <img src="src/img/charkov.png" alt="" class="quote_author-image">
                     <div>
@@ -257,31 +390,45 @@
         </div>
     </div>
     <footer class="footer">
-        <div class="footer_left">
-            <a href="/" class="logo">
-                <img src="src/img/logo-dark.png" alt="nscor-logo">
-            </a>
-            <p class="footer_adress">107023, Россия, Москва, Мажоров переулок, дом 14, бизнес-центр ABC</p>
-            <span class="footer_phone">+7(499) 686-01-86</span>
-            <p class="footer_adress">inquiry@nscor.ru</p>
-        </div>
-        <div class="footer_right">
-            <div class="footer-menu">
-                <a href="#" class="footer-menu_link">компании</a>
-                <a href="#" class="footer-menu_link">Расчет стоимости</a>
-                <a href="#" class="footer-menu_link">Как мы работаем</a>
-                <a href="#" class="footer-menu_link">Примеры</a>
-                <a href="#" class="footer-menu_link">Обращение директора</a>
+        <div class="footer_holder">
+            <div class="footer_left">
+                <a href="/" class="logo">
+                    <img src="src/img/logo-dark.png" alt="nscor-logo">
+                </a>
+                <p class="footer_adress">107023, Россия, Москва, Мажоров переулок, дом 14, бизнес-центр ABC</p>
+                <span class="footer_phone">+7(499) 686-01-86</span>
+                <p class="footer_adress">inquiry@nscor.ru</p>
             </div>
-            <button class="button">Рассчитать стоимость</button>
-            <p class="footer_copyright">© с 2009 года ООО «ЭНЭСКОР»</p>
+            <div class="footer_right">
+                <div class="footer-menu">
+                    <a href="#" class="footer-menu_link">компании</a>
+                    <a href="#" class="footer-menu_link">Расчет стоимости</a>
+                    <a href="#" class="footer-menu_link">Как мы работаем</a>
+                    <a href="#" class="footer-menu_link">Примеры</a>
+                    <a href="#" class="footer-menu_link">Обращение директора</a>
+                </div>
+                <button class="button">Рассчитать стоимость</button>
+                <p class="footer_copyright">© с 2009 года ООО «ЭНЭСКОР»</p>
+            </div>
         </div>
     </footer>
 
+    <div class="fade">
+        <div class="popup">
+            <button class="popup_close"></button>
+            <div class="popup_content">
+                <h3>Доставка в Россию считывателей банковских карт для мобильных устройств</h3>
+                <p>На сегодняшний день компания Pay-Me является лидером Российского рынка по оплатам через мобильные терминалы. Но на самом старте, компания столкнулась с трудностями, которые знакомы многим предпринимателям в России. Считыватели для банковских карт нужно было доставлять из Китая и было непонятно как все это организовать: как платить поставщику, как доставить товар, как проходить таможню и какие документы для этого нужны? Тем более было непонятно сколько денег на это уйдет и как формировать стоимость товара в России? В итоге они пришли к тому, что нужно привлекать помощь со стороны и обратились в нашу компанию. </p>
+                <p>Чтобы сконцентрироваться на продвижении нового товара на рынке и работе с Клиентами, компании Pay-Me было принципиально важно помимо получения расчета расходов на импорт, сократить время своего участия в организации и ведении поставок. Поэтому нами был предложен вариант работы ALL-INCLUSIVE: то есть мы подготовили все расчеты по стоимости импорта, согласовали все вопросы с поставщиком, подготовили весь комплект документов для отгрузки и таможенного оформления в РФ, оформили Нотификацию ФСБ, оплатили товар через свою компанию, организовали авиодоставку - в общем сделали все чтобы компания Pay-Me получила у себя на складе полностью официально растаможенные считыватели, без каких-либо трудозатрат. Таким образом мы поставляем данные считыватели уже 5 лет. </p>
+                <p>На данный момент компания Pay-me оценивается в более чем 500 миллионов рублей, и, возможно, Вы пользовались таким устройством, когда заказывали доставку курьером или при оплате в кафе.  Мы рады, что данная бизнес-идея воплотилась в жизнь и что мы стали частью большого дела. </p>
+            </div>
+        </div>
+    </div>
 
     <script src="src/js/jquery-3.3.1.min.js"></script>
     <script src="src/js/slick.js"></script>
     <script src="src/js/main.js"></script>
+
 </body>
 
 </html>

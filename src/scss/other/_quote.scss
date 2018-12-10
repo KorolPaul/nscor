@@ -3,7 +3,7 @@
     color: $light_color;
     padding: 60px 0;
     @include tablet {
-        padding: 100px 0;
+        padding: 85px 0;
     }
 
     &_holder {
@@ -40,12 +40,12 @@
 
         &::before {
             content: '';
-            background: url(#{$img-path}/icons/arrow-outside.png);
+            background: url(#{$img-path}/icons/arrow-outside.svg) no-repeat;
             position: absolute;
             left: 104%;
             top: 9px;
-            height: 8px;
-            width: 8px;
+            height: 10px;
+            width: 11px;
         }
     }
     &_link-size {

@@ -1,20 +1,10 @@
 .request {
     background: url(#{$img-path}/sky-bg.jpg) no-repeat;
     background-size: cover;
-    padding: 0 0 72px;
+    padding: 45px 0 52px;
     position: relative;
     @include tablet {
-        padding: 0 0 118px;
-    }
-
-    &::before {
-        content: '';
-        background: rgba(255, 255, 255, .5);
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
+        padding: 0 0 100px;
     }
 
     &_holder {
@@ -32,8 +22,9 @@
         }
     }
     &_right {
+        position: relative;
         @include tablet {
-            padding: 100px 0 0;
+            margin: 218px 0 0;
         }
     }
     &_subtitle {
@@ -46,15 +37,15 @@
         padding: 0;
     }
     &_list-item {
-        padding: 0 0 30px 36px;
+        padding: 3px 0 27px 60px;
         position: relative;
 
         &::before {
             content: '';
             position: absolute;
-            left: 0;
-            top: 2px;
-            background: url(#{$img-path}/icons/check.png) no-repeat;
+            left: 9px;
+            top: 11px;
+            background: url(#{$img-path}/icons/check.svg) no-repeat;
             height: 18px;
             width: 24px;
         }

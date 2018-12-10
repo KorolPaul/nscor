@@ -1,0 +1,56 @@
+.fade {
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s ease-in-out opacity .1s,
+                .0001s ease-in-out visibility .2s;
+
+    .popup-opened & {
+        opacity: 1;
+        visibility: visible;
+        transition: .2s ease-in-out opacity .2s,
+                    .0001s ease-in-out visibility;
+    }
+}
+
+.popup {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 62px $layout_indent $layout_indent;
+    background: $light_color;
+    display: flex;
+    z-index: 11;
+    @include tablet {
+        box-sizing: border-box;
+        margin: auto;
+        padding: 62px 102px;
+        max-width: 990px;
+    }
+
+    &_close {
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        right: 0;
+        top: 0;
+        background: $color url(#{$img-path}/icons/x.svg) no-repeat center center;
+        border: none;
+        @include tablet {
+            left: 100%;
+            right: auto;
+            top: 38px;
+        }
+    }
+    &_content {
+        overflow: auto;
+    }
+}
